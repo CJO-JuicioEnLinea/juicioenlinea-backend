@@ -10,6 +10,10 @@ class DocumentoController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function index()
+    {
+
     public function index(Request $request)
     {
         // Validar que se envíe el id del usuario
@@ -21,6 +25,7 @@ class DocumentoController extends Controller
         $documentos = Documento::where('idUsuario', $validatedData['idUsuario'])->get();
 
         return response()->json($documentos);
+
     }
 
     /**
@@ -34,6 +39,8 @@ class DocumentoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+
     
     //  public function store(Request $request)
     //  {
@@ -116,6 +123,7 @@ class DocumentoController extends Controller
 
 
 
+
     /**
      * Display the specified resource.
      */
@@ -148,6 +156,7 @@ class DocumentoController extends Controller
         //
     }
 
+
     /**
      * Download the specified resource.
      */
@@ -166,4 +175,5 @@ class DocumentoController extends Controller
             ->header('Content-Disposition', 'attachment; filename="' . $documento->nombre . '"');
     }
     
+
 }

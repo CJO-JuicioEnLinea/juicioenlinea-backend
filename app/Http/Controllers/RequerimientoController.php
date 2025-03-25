@@ -28,6 +28,7 @@ class RequerimientoController extends Controller
      */
     public function store(Request $request)
     {
+
         // Validar los datos del requerimiento
         $validatedData = $request->validate([
             'idExpediente' => 'required|integer|exists:expedientes,id',

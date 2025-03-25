@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Requerimiento extends Model
 {
+
     //Clase Requerimiento
     protected $table = 'requerimientos';
     protected $primaryKey = 'idRequerimiento';
@@ -19,4 +20,5 @@ class Requerimiento extends Model
         'documento',
         'idGeneral'
     ];
+
 }
