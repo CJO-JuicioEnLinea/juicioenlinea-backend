@@ -6,6 +6,9 @@ use App\Models\HistorialEstadoDocumento;
 use Illuminate\Http\Request;
 use \Illuminate\Database\QueryException;
 
+use \Illuminate\Database\QueryException;
+
+
 class HistorialEstadoDocumentoController extends Controller
 {
     /**
@@ -29,6 +32,7 @@ class HistorialEstadoDocumentoController extends Controller
      */
     public function store(Request $request)
     {
+
         // Validar los datos de entrada
         $validatedData = $request->validate([
             'idDocumento' => 'required|integer|exists:documentos,id',

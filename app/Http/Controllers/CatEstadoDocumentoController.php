@@ -6,6 +6,9 @@ use App\Models\CatEstadoDocumento;
 use Illuminate\Http\Request;
 use \Illuminate\Validation\ValidationException;
 
+use \Illuminate\Validation\ValidationException;
+
+
 class CatEstadoDocumentoController extends Controller
 {
     /**
@@ -29,6 +32,7 @@ class CatEstadoDocumentoController extends Controller
      */
     public function store(Request $request)
     {
+
             // Validar los datos de entrada
             $validatedData = $request->validate([
             'nombre' => 'required|string|max:255',
@@ -63,6 +67,7 @@ class CatEstadoDocumentoController extends Controller
             'error' => $e->getMessage(),
             ], 500);
         }
+
 
     }
 

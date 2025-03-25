@@ -28,6 +28,7 @@ class HistorialEstadoRequerimientoController extends Controller
      */
     public function store(Request $request)
     {
+
         // Validar los datos de entrada
         $validatedData = $request->validate([
             'idRequerimiento' => 'required|integer|exists:requerimientos,id',
@@ -49,6 +50,7 @@ class HistorialEstadoRequerimientoController extends Controller
             'message' => 'Historial de estado de requerimiento creado exitosamente.',
             'data' => $historialEstadoRequerimiento
         ], 201);
+
     }
 
     /**
@@ -56,7 +58,7 @@ class HistorialEstadoRequerimientoController extends Controller
      */
     public function show(HistorialEstadoRequerimiento $historialEstadoRequerimiento)
     {
-        //  
+
     }
 
     /**

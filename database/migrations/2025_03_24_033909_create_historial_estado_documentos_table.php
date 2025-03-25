@@ -24,6 +24,7 @@ return new class extends Migration
             $table->foreign('idCatEstadoDocumento')->references('idCatalogoEstadoDocumento')->on('cat_estado_documento');
             $table->foreign('idUsuario')->references('id')->on('users')->onDelete('SET NULL');
             $table->foreign('idDocumento')->references('idDocumento')->on('documentos')->onDelete('set null');
+
         });
     }
 

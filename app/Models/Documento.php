@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Documento extends Model
 {
+
     //Clase documento
    
         protected $table = 'documentos';
@@ -20,5 +21,5 @@ class Documento extends Model
         ];
     
     
-    
+
 }
